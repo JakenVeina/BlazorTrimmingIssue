@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+
+@namespace BlazorTrimmingIssue.Client
+
+@inject ApplicationRootModel Model
+
+<dl>
+    <dt><button @onclick="Model.TestScalarResponseAsync" disabled=@Model.IsTesting>TEST SCALAR RESPONSE</button></dt>
+    <dd><textarea style="width: 800px; height:50px;">@Model.ScalarResponseText</textarea></dd>
+    <dt><button @onclick="Model.TestVectorResponseAsync" disabled=@Model.IsTesting>TEST VECTOR RESPONSE</button></dt>
+    <dd><textarea style="width: 800px; height:50px;">@Model.VectorResponseText</textarea></dd>
+    <dt><button @onclick="Model.TestVectorResponse2Async" disabled=@Model.IsTesting>TEST VECTOR RESPONSE 2</button></dt>
+    <dd><textarea style="width: 800px; height:50px;">@Model.VectorResponse2Text</textarea></dd>
+    <dt><button @onclick="Model.TestStreamingResponseAsync" disabled=@Model.IsTesting>TEST STREAMING RESPONSE</button></dt>
+    <dd><textarea style="width: 800px; height:50px;">@Model.StreamingResponseText</textarea></dd>
+</dl>
+
+@code {
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Model.StateChanged += StateHasChanged;
+    }
+}

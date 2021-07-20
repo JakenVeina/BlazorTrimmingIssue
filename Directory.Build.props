@@ -1,0 +1,10 @@
+<Project>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>9</LangVersion>
+    <RazorLangVersion>5.0</RazorLangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
