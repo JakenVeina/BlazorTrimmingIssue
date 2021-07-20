@@ -1,6 +1,4 @@
-using System.Collections.Immutable;
 using System.Net.Http;
-using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
 using BlazorTrimmingIssue.Shared;
@@ -17,8 +15,6 @@ namespace BlazorTrimmingIssue.Client
 {
     public static class EntryPoint
     {
-        public static readonly ImmutableArray<string> x = new();
-
         public static async Task Main(string[] args)
         {
             var hostBuilder = WebAssemblyHostBuilder.CreateDefault(args);
